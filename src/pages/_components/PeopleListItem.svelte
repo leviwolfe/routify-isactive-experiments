@@ -2,12 +2,12 @@
   // here we render a link to a single person. the active person
   // should be highlighted with a red border.
 
-  import { url, isActive } from "@roxi/routify";
+  import { isActive } from "@roxi/routify";
   export let person;
   export let personId;
 
   // create the permalink for this user
-  $: permalink = $url(`/${personId}`);
+  $: permalink = `/${personId}`;
 
   // attempt to detect the active person via reactive statement
   $: isPersonActive = $isActive(permalink);
@@ -18,7 +18,7 @@
   on the route for this user!
 -->
 <li class:active={$isActive(permalink)}>
-  <a href={$url(permalink)}>
+  <a href={permalink}>
     <img src={person.picture.thumbnail} alt={person.name.first} />
     {person.name.first}
     {person.name.last}
