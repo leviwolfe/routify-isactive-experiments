@@ -1,8 +1,7 @@
 <script>
-    import RoutifyIntro from './example/_components/RoutifyIntro.svelte'
-    import { metatags } from '@roxi/routify'
-    metatags.title = 'My Routify app'
-    metatags.description = 'Description coming soon...'
+  // zero state page asking user to select a person
+  // from the layout's links created by PeopleListItem
 </script>
 
-<RoutifyIntro />
+Welcome to the demo, please select a person over there!
+<h1>←</h1>
